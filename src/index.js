@@ -1,13 +1,15 @@
 function showSelectedCity(event) {
   let londonTime = moment()
     .tz("Europe/London")
-    .format("[It is currently] dddd, MMMM D, YYYY [in Europe/London.]");
+    .format("[It is currently] dddd, MMMM D, YYYY, h:mm A [in Europe/London.]");
   let sydneyTime = moment()
     .tz("Australia/Sydney")
-    .format("[It is currently] dddd, MMMM D, YYYY [in Australia/Sydney.]");
+    .format(
+      "[It is currently] dddd, MMMM D, YYYY, h:mm A [in Australia/Sydney.]"
+    );
   let tokyoTime = moment()
     .tz("Asia/Tokyo")
-    .format("[It is currently] dddd, MMMM D, YYYY [in Asia/Tokyo.]");
+    .format("[It is currently] dddd, MMMM D, YYYY, h:mm A [in Asia/Tokyo.]");
   if (event.target.value === "london") {
     alert(londonTime);
   }
